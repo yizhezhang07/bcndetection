@@ -1,0 +1,12 @@
+per,std,inst,acc,method
+600,0.0,0,1.0,RobustPeriod
+600,0.0,2,1.0,RobustPeriod
+600,0.0,4,1.0,RobustPeriod
+600,0.0,6,1.0,RobustPeriod
+600,0.0,8,1.0,RobustPeriod
+600,0.0,10,1.0,RobustPeriod
+600,0.0,12,1.0,RobustPeriod
+600,0.0,14,1.0,RobustPeriod
+600,0.0,16,1.0,RobustPeriod
+600,0.0,18,1.0,RobustPeriod
+600,0.0,20,1.0,RobustPeriod
