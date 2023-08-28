@@ -1,0 +1,12 @@
+jupyterlab
+matplotlib
+seaborn
+pyarrow
+scikit-learn ==0.24.1
+scipy ==1.7.1
+pandas ==1.5.3
+numpy ==1.21.2
+emd ==0.5.3
+astropy ==4.0.2
+statsmodels ==0.12.0
+pywavelets ==1.3.0
