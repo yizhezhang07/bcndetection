@@ -1,6 +1,6 @@
 ### ReadME
 -----
-This repo contains the code implementation of our proposed periodicity detection algorithm in paper.
+This repo contains the pythhon implementation of our proposed periodicity detection algorithm in paper.
 
 We provide three demo jupyter-notebooks `gauss/insert/omit_demo.ipynb` to generate the results in Section 4.2 Algorithm Evaluation Figure 4. 
 
@@ -32,7 +32,7 @@ If you're unfamiliar with `conda`, please kindly refer to the official installat
 Once you have the conda environment installed, proceed to the git repository directory and execute the following subsequent commands to install the required dependencies.
 
 ```
-cd bcndetection
+cd $the_gitrepo's_directory
 conda create --name bcn-env python=3.8.3
 conda activate bcn-env
 pip install -r requirements.txt
@@ -41,6 +41,18 @@ Executing these commands will install Python version 3.8.3 along with all the es
 
 ```
 jupyter-lab
+```
+To access the jupyterlab server and interact with the notebooks, follow the instructions prompted in the terminal and open the urls in the browser. The urls looks like:
+
+```
+http://localhost:8888/lab?token=somerandomecharacters
+```
+
+### Cleanup the testing conda environment
+The following commands will remove all dependencies and clean up the installed conda environment.
+```
+conda deactivate
+conda remove -n bcn-env --all
 ```
 
 
@@ -60,5 +72,7 @@ jupyter-lab
     ├── omit_demo.ipynb         # demo for omiting noise simulation and visualization
     ├── playwithsigsimulation.ipynb     # visualizing periodic signals with various noise configurations.
     ├── plotting.ipynb         # plotting script for figure 4.
+    ├── requirements.txt       # pip package dependencies
     └── README.md
+
  
