@@ -14,8 +14,8 @@ def get_fft_comp(series, j, t):
             MX,
             M=sm.robust.norms.HuberT(t=t),
             deriv=0).fit()
-        val = np.sqrt(n / (8 * np.pi)) * \
-            np.complex(fitrob.params[0], -fitrob.params[1])
+        val = np.sqrt(n / (8 * np.pi)) * np.complex(fitrob.params[0], -fitrob.params[1])
+            #np.complex128(fitrob.params[0], -fitrob.params[1])
         return val
     else:
         fitrob = sm.RLM(
@@ -23,8 +23,8 @@ def get_fft_comp(series, j, t):
             MX,
             M=sm.robust.norms.HuberT(t=t),
             deriv=0).fit()
-        val = np.sqrt(n / (2 * np.pi)) * \
-            np.complex(fitrob.params[0], -0)
+        val = np.sqrt(n / (2 * np.pi)) * np.complex(fitrob.params[0], -0)
+            #np.complex128(fitrob.params[0], -0)
         return val
 
 

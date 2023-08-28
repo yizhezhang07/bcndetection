@@ -17,8 +17,8 @@ def m_perio_reg(series, t=1.345):
                 MX,
                 M=sm.robust.norms.HuberT(t=t),
                 deriv=0).fit()
-            val = np.sqrt(n / (8 * np.pi)) * \
-                np.complex(fitrob.params[0], -fitrob.params[1])
+            val = np.sqrt(n / (8 * np.pi)) * np.complex(fitrob.params[0], -fitrob.params[1])
+                #np.complex(fitrob.params[0], -fitrob.params[1])
             fft.append(val)
         else:
             fitrob = sm.RLM(
@@ -26,8 +26,8 @@ def m_perio_reg(series, t=1.345):
                 MX,
                 M=sm.robust.norms.HuberT(t=t),
                 deriv=0).fit()
-            val = np.sqrt(n / (2 * np.pi)) * \
-                np.complex(fitrob.params[0], -0)
+            val = np.sqrt(n / (2 * np.pi)) * np.complex(fitrob.params[0], -0)
+                #np.complex128(fitrob.params[0], -0)
             fft.append(val)
 
     perior = np.abs(fft) ** 2
