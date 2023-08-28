@@ -1,6 +1,6 @@
 ### ReadME
 -----
-This repo contains the pythhon implementation of our proposed periodicity detection algorithm in paper.
+This repo contains the python implementation of our proposed periodicity detection algorithm in paper.
 
 We provide three demo jupyter-notebooks `gauss/insert/omit_demo.ipynb` to generate the results in Section 4.2 Algorithm Evaluation Figure 4. 
 
@@ -75,11 +75,11 @@ conda remove -n bcn-env --all
         ├── *.py                # our implementation of BAYWATCH, UPNSCA, STATS-based, and our proposed algorithm
     ├── gauss_demo.ipynb        # demo for shifting noise simulation and visualization
     ├── insert_demo.ipynb       # demo for insertion noise simulation and visualization
-    ├── omit_demo.ipynb         # demo for omiting noise simulation and visualization
+    ├── omit_demo.ipynb         # demo for omitting noise simulation and visualization
     ├── playwithsigsimulation.ipynb     # visualizing periodic signals with various noise configurations.
     ├── plotting.ipynb         # plotting script for figure 4.
     ├── requirements.txt       # pip package dependencies
-    ├── bcndetection.tar.gz    # compressed everythin for anon review purpose
+    ├── bcndetection.tar.gz    # compressed everything for anonymous reviewing process
     └── README.md
 
  
