@@ -1,3 +1,8 @@
+### Artifacts reviewing process
+----
+
+We've anonymized the repository on anonymous.4open.science, which unfortunately doesn't support the `git clone` command. To enhance convenience, we've compressed the entire repository into a file named `bcndetection.tar.gz`. Kindly download this compressed file, extract its contents onto your local machine, and then proceed to follow the instructions provided below to configure your testing environment.
+
 ### ReadME
 -----
 This repo contains the python implementation of our proposed periodicity detection algorithm in paper.
@@ -25,10 +30,6 @@ We chose jupyter-notebooks for creating demos due to their high level of interac
 
 The required dependencies are specified in `requirements.txt`, and we advise users to utilize a `conda` environment to prevent any potential package conflicts
 
-#### Artifacts reviewing process
-----
-
-We've anonymized the repository on anonymous.4open.science, which unfortunately doesn't support the `git clone` command. To enhance convenience, we've compressed the entire repository into a file named `bcndetection.tar.gz`. Kindly download this compressed file, extract its contents onto your local machine, and then proceed to follow the instructions provided below to configure your testing environment.
 
 #### Install required packages with conda environment
 ----
