@@ -25,6 +25,11 @@ We chose jupyter-notebooks for creating demos due to their high level of interac
 
 The required dependencies are specified in `requirements.txt`, and we advise users to utilize a `conda` environment to prevent any potential package conflicts
 
+#### Artifacts reviewing process
+----
+
+We've anonymized the repository on anonymous.4open.science, which unfortunately doesn't support the `git clone` command. To enhance convenience, we've compressed the entire repository into a file named `bcndetection.tar.gz`. Kindly download this compressed file, extract its contents onto your local machine, and then proceed to follow the instructions provided below to configure your testing environment.
+
 #### Install required packages with conda environment
 ----
 If you're unfamiliar with `conda`, please kindly refer to the official installation guide for [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html). Alternatively, you can opt for the installation of [Miniconda](https://docs.conda.io/en/latest/miniconda.html), which is recommended if you're looking for a minimal installation of conda environment.
@@ -48,7 +53,8 @@ To access the jupyterlab server and interact with the notebooks, follow the inst
 http://localhost:8888/lab?token=somerandomecharacters
 ```
 
-### Cleanup the testing conda environment
+#### Cleanup the testing conda environment
+----
 The following commands will remove all dependencies and clean up the installed conda environment.
 ```
 conda deactivate
@@ -73,6 +79,7 @@ conda remove -n bcn-env --all
     ├── playwithsigsimulation.ipynb     # visualizing periodic signals with various noise configurations.
     ├── plotting.ipynb         # plotting script for figure 4.
     ├── requirements.txt       # pip package dependencies
+    ├── bcndetection.tar.gz    # compressed everythin for anon review purpose
     └── README.md
 
  
