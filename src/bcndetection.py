@@ -54,7 +54,8 @@ def bcndetection_method(signals):
     periods = []
     detected = False
     
-    sigcnt = len(signals[signals>0])
+    #sigcnt = len(signals[signals>0])
+    sigcnt = len([i for i in signals if i > 0])
     if sigcnt < 3:
         return periods, detected
     

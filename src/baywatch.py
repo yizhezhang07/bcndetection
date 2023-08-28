@@ -59,14 +59,15 @@ def baywatch_method(signals):
     periods = []
     detected = False
 
-    sigcnt = len(signals[signals>0])
+    #sigcnt = len(signals[signals>0])
+    sigcnt = len([i for i in signals if i > 0])
     if sigcnt < 3:
         return periods, detected
         
     freq, psd = compute_psd(signals)
     psd_threshold = baywatch_permute(signals)
     potential_pers = get_potential_periods(freq, psd, psd_threshold)
-    
+
     # if no valid periodicity
     if len(potential_pers) == 0:
         return periods, detected
