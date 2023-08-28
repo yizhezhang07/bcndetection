@@ -3,3 +3,6 @@ __pycache__/
 
 # Jupyter Notebooks
 .ipynb_checkpoints
+
+# MAC 
+.DS_Store
