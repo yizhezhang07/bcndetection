@@ -37,12 +37,29 @@ If you're unfamiliar with `conda`, please kindly refer to the official installat
 
 Once you have the conda environment installed, proceed to the git repository directory and execute the following subsequent commands to install the required dependencies.
 
+#### Install with Conda Lock
+[Conda-Lock](https://github.com/conda/conda-lock) provides fully reproducible lock files for conda environments. To install conda-lock
+```
+conda install --channel=conda-forge --name=base conda-lock
+```
+After the installation of conda lock:
+
 ```
 cd $the_gitrepo's_directory
-conda create --name bcn-env python=3.8.3
-conda activate bcn-env
+conda-lock install --name BCNENV conda-lock.yml
+conda activate BCNENV
+```
+
+#### Install with pip
+To install with conda and pip:
+```
+cd $the_gitrepo's_directory
+conda create --name BCNENV python=3.8.3
+conda activate BCNENV
 pip install -r requirements.txt
 ```
+
+#### After installation
 Executing these commands will install Python version 3.8.3 along with all the essential packages that we have tested our code with. Subsequently, users can engage with the demo notebooks by initiating JupyterLab:
 
 ```
@@ -59,7 +76,7 @@ http://localhost:8888/lab?token=somerandomecharacters
 The following commands will remove all dependencies and clean up the installed conda environment.
 ```
 conda deactivate
-conda remove -n bcn-env --all
+conda remove -n BCNENV --all
 ```
 
 
@@ -80,6 +97,7 @@ conda remove -n bcn-env --all
     ├── playwithsigsimulation.ipynb     # visualizing periodic signals with various noise configurations.
     ├── plotting.ipynb         # plotting script for figure 4.
     ├── requirements.txt       # pip package dependencies
+    ├── conda-lock.yml         # conda-lock file
     ├── bcndetection.tar.gz    # compressed everything for anonymous reviewing process
     └── README.md
 
