@@ -1,6 +1,7 @@
 import pandas as pd
 import tldextract
 import ipaddress
+import os
 
 
 def compute_ipscore(df, fqdn_col="host"):
@@ -88,7 +89,8 @@ def compute_length2mal(fqdn, cntMalFQDNs, cntMalDom, histmal):
     return 10 # set up a large number to distinguish between has malicious neighbor vs not
 
 
-def gen_len2mal_score(logday, datafpath, savefpath, histmalfpath):
+def gen_len2mal_score(logday, datafpath, savefpath, 
+                      histmalfpath, domscore_fpath, ipscore_fpath):
     
     """
     Finding nearest malicious node can be done using cypher queries in neo4j database.
@@ -112,10 +114,7 @@ def gen_len2mal_score(logday, datafpath, savefpath, histmalfpath):
     """
     
     print("[Info]====== Generate Graph Connection Features for date:", logday, "======")
-    
-    domscore_fpath = os.path.join(feature_dir, "domscore_raw.csv")
-    ipscore_fpath = os.path.join(feature_dir, "ipscore_raw.csv")
-    
+
     if (not os.path.exists(domscore_fpath)) or (not os.path.exists(ipscore_fpath)):
         print("[Error] Missing domscore and ipscore data.")
         return -1
