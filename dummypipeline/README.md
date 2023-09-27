@@ -3,16 +3,16 @@
 This folder shows a dummy pipeline of our feature generation process. 
 There are many differences between this lightweight pipeline and our deployment code:
 - Our deployment code is based on spark, kafka, and a customized data processing framework that we are unable to share. 
-- We build this lightweight pipeline primarily using pandas within a relatively short period, and we haven't tested on months of data. So there might be some bugs that we are unaware of. 
-- Our original deployment (feature generation and active learning) is running on a daily bases. Features generated on Day N depends on Day N-1's data and learning feedbacks. This interative updating process is not demonstrated in this notebook.   
+- We built this lightweight pipeline primarily using pandas within a relatively short period. We have not extensively tested the dummy pipeline with large-scale data or over extended periods, so there may be undiscovered bugs.
+- Our original deployment (feature generation and active learning) is running on a daily basis. Features generated on Day N depend on Day N-1's data and learning feedback. This iterative updating process is not demonstrated in this notebook.   
 
 ### [Important] Neo4j GraphDB
 ----
 - We leverage neo4j graphDB to maintain topological structures of our network. 
 
 #### Neo4j GraphDB Installation and Configuration
-- Before we start to compute topological features, we need to install and configure graph database. The following code was deployed on neo4j graph database community version 4.4.0
-- Offical installation guidance can be found at: https://debian.neo4j.com/?_ga=2.50993706.2051114848.1695324818-590444767.1695324818
+- Before we start to compute topological features, we need to install and configure a graph database. The following code was deployed on neo4j graph database community version 4.4.0
+- Official installation guidance can be found at: https://debian.neo4j.com/?_ga=2.50993706.2051114848.1695324818-590444767.1695324818
 
 - To install neo4j 4.4.0:
     - `wget -O - https://debian.neo4j.com/neotechnology.gpg.key | sudo apt-key add -`
@@ -30,9 +30,9 @@ There are many differences between this lightweight pipeline and our deployment 
     - The default username is:`neo4j`, and the default password is:`neo4j`. Change the password to your own password.
     - If you are using our test server, the default password is set to `acsac`.
 - Leave the `cypher-shell` using `Ctrl + D`
-- **Important.** We need to config the database configuration before we start the database. There are two approaches:
+- **Important.** We need to configure the database before we start the database. There are two approaches:
     - **First approach**: 
-        - you can copy our provided configuration to rewrite the configurate.
+        - you can copy our provided configuration to rewrite the configuration file.
         - `sudo mv /etc/neo4j/neo4j.conf /etc/neo4j/neo4j_bk.conf`
         - `sudo cp /home/ubuntu/bcndetection/dummypipeline/neo4j.conf /etc/neo4j/neo4j.conf`
     - **Second approach**: 
@@ -68,10 +68,5 @@ As the graph-based features rely on some historical data, please run `0_genfeats
     ├── src                          # Source files
     ├── 0_genfeats_nongraph.ipynb    # demo for non-graph features (run this FIRST)
     ├── 1_genfeats_graph.ipynb       # demo for graph features
-    ├── omit_demo.ipynb         # demo for omitting noise simulation and visualization
-    ├── playwithsigsimulation.ipynb     # visualizing periodic signals with various noise configurations.
-    ├── plotting.ipynb         # plotting script for figure 4.
-    ├── requirements.txt       # pip package dependencies
-    ├── conda-lock.yml         # conda-lock file
-    ├── bcndetection.tar.gz    # compressed everything for anonymous reviewing process
+    ├── apoc.conf/neo4j.conf         # neo4j configuration files
     └── README.md

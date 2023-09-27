@@ -15,7 +15,7 @@ We anticipate the reproduced results using these three notebooks to be highly si
 
 #### Testing Environment
 ------
-We've tested this repo on our server (note that this server is not the machine deployed in the paper):
+We've tested this repo on our server for ACSAC artifact reviewing process (note that this server is not the machine deployed in the paper):
 
 ```
 OS: Ubuntu 22.04.2 LTS
