@@ -87,6 +87,7 @@ conda remove -n BCNENV --all
         ├── omt                 # pregenerated signals with omitting noise
         ├── insert              # pregenerated signals with insertion noise
     ├── results                 # results from previous runs
+    ├── dummypipeline           # demo feature generation pipeline
     ├── src                     # Source files
         ├── robustperiod        # fork of the implementations of RobustPeriod (https://github.com/ariaghora/robust-period)
         ├── sigsimulation.py    # signal simulation code
