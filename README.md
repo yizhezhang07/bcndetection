@@ -102,4 +102,14 @@ conda remove -n BCNENV --all
     ├── bcndetection.tar.gz    # compressed everything for anonymous reviewing process
     └── README.md
 
- 
+### Citing us
+If you're using our work in your research or applications, please cite us using this BibTeX:
+```
+@inproceedings{zhang2023global,
+  title={Global Analysis with Aggregation-based Beaconing Detection across Large Campus Networks},
+  author={Zhang, Yizhe and Dong, Hongying and Nottingham, Alastair and Buchanan, Molly and Brown, Donald E and Sun, Yixin},
+  booktitle={Proceedings of the 39th Annual Computer Security Applications Conference},
+  pages={565--579},
+  year={2023}
+}
+```
